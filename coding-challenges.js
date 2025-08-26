@@ -390,3 +390,40 @@ function numberDigits(x) {
 console.log(numberDigits(5));     // One digit: 5
 console.log(numberDigits(12));    // Two digits: 12
 console.log(numberDigits(-202));  // The number is: -202
+
+// LOOPS
+
+// 1. Given the spellingWord, 
+// use a for...of loop to log each letter using console.log().
+
+const spellingWord = 'hippopotamus';
+
+for (const letter of spellingWord) {
+    console.log(letter);
+}
+
+// 2. Write a for...of loop that iterates through our pokemonList array.
+
+// Inside the block of the for...of loop, use console.log()
+// and string interpolation as modeled above to log each element 
+// in the pokemon array within the string 'You caught a 'X'!' 
+// For example, the first iteration of the loop should print 
+// ‘You caught a Pikachu!’ to the console.
+
+// One of the elements, 'Yoshi', is not a Pokemon. 
+// If you encounter 'Yoshi', use continue to skip this element 
+// before it is logged to the console.
+
+const pokemonList = ['Pikachu', 'Charizard', 'Squirtle', 'Yoshi', 'Snorlax'];
+
+// Loop through each Pokémon in the list
+for (const pokemon of pokemonList) {
+    // Skip 'Yoshi' since it's not a Pokémon
+    if (pokemon === 'Yoshi') {
+        continue;
+    }
+
+    // Log the message with string interpolation
+    console.log(`You caught a ${pokemon}!`);
+}
+
